@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEU NOME — design gráfico & UI</title>
+<meta name="description" content="Portfólio de design gráfico e UI. Projetos, serviços e contato.">
+
+<!--
+  COMO CUSTOMIZAR ESTE ARQUIVO
+  1. Troque "SEU NOME" (título da página, logo e hero) pelo seu nome/marca.
+  2. Na seção #projetos, troque os 4 blocos .project-card por seus projetos reais
+     (título, descrição, tags e, se quiser, uma imagem real no lugar do .thumb-glitch).
+  3. Na seção #contato, troque o link do e-mail e os links de redes sociais.
+  4. O formulário de contato não envia nada sozinho — ele só mostra uma mensagem
+     de confirmação (script.js, função handleFormSubmit). Para receber e-mails de
+     verdade, plugue um serviço como Formspree, EmailJS ou um endpoint seu.
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-blob" id="cursorBlob" aria-hidden="true"></div>
+
+<header class="nav">
+  <a href="#hero" class="logo">glitch.studio</a>
+
+  <button class="nav-toggle" id="navToggle" aria-label="abrir menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="#sobre">sobre</a>
+    <a href="#servicos">serviços</a>
+    <a href="#projetos">projetos</a>
+    <a href="#contato" class="nav-cta">fale comigo</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="hero-blob blob-1" aria-hidden="true"></div>
+    <div class="hero-blob blob-2" aria-hidden="true"></div>
+    <div class="hero-blob blob-3" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <p class="sticker sticker-status">✦ disponível para freelas</p>
+
+      <h1 class="hero-title glitch" data-text="SEU NOME">SEU NOME</h1>
+
+      <p class="hero-sub">
+        Design gráfico &amp; UI feito de textura, cor errada de propósito
+        e um pouco de caos organizado. Identidade visual, interfaces e
+        peças que não parecem ter saído de um molde.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projetos" class="btn btn-primary">ver projetos</a>
+        <a href="#contato" class="btn btn-ghost">bora conversar</a>
+      </div>
+    </div>
+
+    <div class="scroll-hint" aria-hidden="true">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="sobre">
+    <div class="sobre-photo">
+      <div class="polaroid">
+        <div class="polaroid-img"></div>
+        <p class="polaroid-caption">clique* &nbsp; *não é bem um clique</p>
+      </div>
+      <div class="tape tape-1"></div>
+      <div class="tape tape-2"></div>
+    </div>
+
+    <div class="sobre-text">
+      <h2 class="section-title">sobre mim</h2>
+      <p>
+        Sou designer gráfica e de interfaces, e gosto de projetos onde dá pra
+        colocar personalidade em cada detalhe — da paleta de cor ao texto de
+        um botão. Comecei brincando com colagem digital e hoje uso esse mesmo
+        olhar em identidades visuais e produtos digitais.
+      </p>
+      <p>
+        Acredito em design com textura: nem tudo precisa ser limpo e
+        perfeitamente alinhado pra funcionar bem. Às vezes o "erro" é o que
+        fica na memória.
+      </p>
+
+      <ul class="tag-list">
+        <li>Identidade visual</li>
+        <li>UI Design</li>
+        <li>Figma</li>
+        <li>Ilustração digital</li>
+        <li>Motion básico</li>
+        <li>Direção de arte</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="servicos">
+    <h2 class="section-title">serviços</h2>
+
+    <div class="servicos-grid">
+      <article class="service-card card-1">
+        <span class="service-icon">◐</span>
+        <h3>Identidade visual</h3>
+        <p>Logo, paleta, tipografia e um sistema visual que se sustenta em qualquer aplicação — do post ao outdoor.</p>
+      </article>
+
+      <article class="service-card card-2">
+        <span class="service-icon">▧</span>
+        <h3>UI Design</h3>
+        <p>Telas de site, app ou produto digital pensadas para uso real, com estilo próprio e nada de template genérico.</p>
+      </article>
+
+      <article class="service-card card-3">
+        <span class="service-icon">✧</span>
+        <h3>Social media</h3>
+        <p>Peças e templates de conteúdo com identidade consistente, prontos pra manter o feed com cara de marca.</p>
+      </article>
+
+      <article class="service-card card-4">
+        <span class="service-icon">⌁</span>
+        <h3>Direção de arte</h3>
+        <p>Curadoria visual para campanhas, editoriais ou lançamentos — do moodboard até a entrega final.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section id="projetos" class="projetos">
+    <h2 class="section-title">projetos</h2>
+    <p class="section-sub">uma seleção de trabalhos recentes — troque pelos seus</p>
+
+    <div class="projetos-grid">
+
+      <article class="project-card">
+        <div class="window">
+          <div class="window-bar">
+            <span></span><span></span><span></span>
+            <p class="window-url">projeto-um.site</p>
+          </div>
+          <div class="thumb-glitch thumb-1"></div>
+        </div>
+        <div class="project-info">
+          <h3>Nome do Projeto 01</h3>
+          <p>Breve descrição do que foi feito e qual problema o projeto resolveu.</p>
+          <div class="project-tags"><span>Branding</span><span>UI</span></div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="window">
+          <div class="window-bar">
+            <span></span><span></span><span></span>
+            <p class="window-url">projeto-dois.site</p>
+          </div>
+          <div class="thumb-glitch thumb-2"></div>
+        </div>
+        <div class="project-info">
+          <h3>Nome do Projeto 02</h3>
+          <p>Breve descrição do que foi feito e qual problema o projeto resolveu.</p>
+          <div class="project-tags"><span>App</span><span>UX</span></div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="window">
+          <div class="window-bar">
+            <span></span><span></span><span></span>
+            <p class="window-url">projeto-tres.site</p>
+          </div>
+          <div class="thumb-glitch thumb-3"></div>
+        </div>
+        <div class="project-info">
+          <h3>Nome do Projeto 03</h3>
+          <p>Breve descrição do que foi feito e qual problema o projeto resolveu.</p>
+          <div class="project-tags"><span>Editorial</span><span>Print</span></div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="window">
+          <div class="window-bar">
+            <span></span><span></span><span></span>
+            <p class="window-url">projeto-quatro.site</p>
+          </div>
+          <div class="thumb-glitch thumb-4"></div>
+        </div>
+        <div class="project-info">
+          <h3>Nome do Projeto 04</h3>
+          <p>Breve descrição do que foi feito e qual problema o projeto resolveu.</p>
+          <div class="project-tags"><span>Identidade</span><span>Social</span></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="contato">
+    <div class="contato-inner">
+      <h2 class="section-title">bora fazer alguma coisa?</h2>
+      <p class="section-sub">me conta sua ideia — respondo rapidinho</p>
+
+      <form class="contato-form" id="contatoForm">
+        <label>
+          nome
+          <input type="text" name="nome" required>
+        </label>
+        <label>
+          e-mail
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          mensagem
+          <textarea name="mensagem" rows="4" required></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary btn-send">
+          <span class="btn-send-icon">💾</span> enviar
+        </button>
+        <p class="form-status" id="formStatus" role="status"></p>
+      </form>
+
+      <div class="socials">
+        <a href="mailto:seuemail@exemplo.com">e-mail</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener">instagram</a>
+        <a href="https://behance.net" target="_blank" rel="noopener">behance</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener">linkedin</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>design gráfico ✦ UI ✦ identidade visual ✦ direção de arte ✦ social media ✦ branding ✦ </span>
+      <span>design gráfico ✦ UI ✦ identidade visual ✦ direção de arte ✦ social media ✦ branding ✦ </span>
+    </div>
+  </div>
+  <p class="footer-credit">© <span id="year"></span> SEU NOME — feito à mão, sem template.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
