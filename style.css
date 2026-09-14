@@ -248,6 +248,8 @@ section{ padding: 7rem 6vw; position:relative; }
 }
 .polaroid-img{
   aspect-ratio:1/1.05;
+  width:100%;
+  object-fit:cover;
   background:
     radial-gradient(circle at 30% 30%, var(--blue), transparent 60%),
     radial-gradient(circle at 70% 70%, var(--red), transparent 60%),
@@ -309,7 +311,7 @@ section{ padding: 7rem 6vw; position:relative; }
 .window-bar span{ width:9px; height:9px; border-radius:50%; background:var(--ink); opacity:.3; }
 .window-url{ margin:0 0 0 .6rem; font-size:.75rem; color:var(--ink-soft); }
 
-.thumb-glitch{ aspect-ratio:16/10; position:relative; overflow:hidden; }
+.thumb-glitch{ aspect-ratio:16/10; position:relative; overflow:hidden; width:100%; object-fit:cover; }
 .thumb-1{ background:linear-gradient(120deg, var(--red), var(--yellow)); }
 .thumb-2{ background:linear-gradient(120deg, var(--blue), var(--red)); }
 .thumb-3{ background:linear-gradient(120deg, var(--yellow), var(--blue)); }
