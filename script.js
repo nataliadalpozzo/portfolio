@@ -52,15 +52,23 @@ if (hasFinePointer && !reduceMotion) {
 /* ---------- formulário de contato ---------- */
 const form = document.getElementById("contatoForm");
 const status = document.getElementById("formStatus");
+const DESTINO_EMAIL = "nataliadalpozzopj@gmail.com.br";
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  // Este formulário ainda não envia nada de verdade.
-  // Para receber as mensagens no seu e-mail, plugue um serviço como
-  // Formspree (https://formspree.io) ou EmailJS (https://www.emailjs.com),
-  // trocando este bloco pela chamada fetch() do serviço escolhido.
+  const nome = form.nome.value.trim();
+  const email = form.email.value.trim();
+  const assunto = form.assunto.value.trim();
+  const mensagem = form.mensagem.value.trim();
 
-  status.textContent = "mensagem pronta pra enviar — falta só conectar um serviço de e-mail :)";
-  form.reset();
+  const corpo = `Nome: ${nome}\nE-mail: ${email}\n\n${mensagem}`;
+  const mailtoUrl =
+    `mailto:${DESTINO_EMAIL}` +
+    `?subject=${encodeURIComponent(assunto)}` +
+    `&body=${encodeURIComponent(corpo)}`;
+
+  window.location.href = mailtoUrl;
+
+  status.textContent = "abrindo seu app de e-mail com a mensagem pronta pra enviar...";
 });
