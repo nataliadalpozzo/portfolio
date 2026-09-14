@@ -3,16 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SEU NOME — design gráfico & UI</title>
-<meta name="description" content="Portfólio de design gráfico e UI. Projetos, serviços e contato.">
+<title>Natalia Dal Pozzo — design gráfico & vídeo</title>
+<meta name="description" content="Portfólio de Natalia Dal Pozzo. Design gráfico, identidade visual, social media e motion design.">
 
 <!--
   COMO CUSTOMIZAR ESTE ARQUIVO
-  1. Troque "SEU NOME" (título da página, logo e hero) pelo seu nome/marca.
-  2. Na seção #projetos, troque os 4 blocos .project-card por seus projetos reais
+  1. Na seção #projetos, troque os 4 blocos .project-card por seus projetos reais
      (título, descrição, tags e, se quiser, uma imagem real no lugar do .thumb-glitch).
-  3. Na seção #contato, troque o link do e-mail e os links de redes sociais.
-  4. O formulário de contato não envia nada sozinho — ele só mostra uma mensagem
+  2. O formulário de contato não envia nada sozinho — ele só mostra uma mensagem
      de confirmação (script.js, função handleFormSubmit). Para receber e-mails de
      verdade, plugue um serviço como Formspree, EmailJS ou um endpoint seu.
 -->
@@ -26,10 +24,11 @@
 <body>
 
 <div class="grain" aria-hidden="true"></div>
+<div class="scanlines" aria-hidden="true"></div>
 <div class="cursor-blob" id="cursorBlob" aria-hidden="true"></div>
 
 <header class="nav">
-  <a href="#hero" class="logo">glitch.studio</a>
+  <a href="#hero" class="logo">natália.dp</a>
 
   <button class="nav-toggle" id="navToggle" aria-label="abrir menu" aria-expanded="false">
     <span></span><span></span><span></span>
@@ -47,20 +46,16 @@
 
   <!-- HERO -->
   <section id="hero" class="hero">
-    <div class="hero-blob blob-1" aria-hidden="true"></div>
-    <div class="hero-blob blob-2" aria-hidden="true"></div>
-    <div class="hero-blob blob-3" aria-hidden="true"></div>
+    <div class="splatter splatter-1" aria-hidden="true"></div>
+    <div class="splatter splatter-2" aria-hidden="true"></div>
+    <div class="splatter splatter-3" aria-hidden="true"></div>
 
     <div class="hero-inner">
       <p class="sticker sticker-status">✦ disponível para freelas</p>
 
-      <h1 class="hero-title glitch" data-text="SEU NOME">SEU NOME</h1>
+      <h1 class="hero-title glitch" data-text="Natalia Dal Pozzo">Natalia Dal Pozzo</h1>
 
-      <p class="hero-sub">
-        Design gráfico &amp; UI feito de textura, cor errada de propósito
-        e um pouco de caos organizado. Identidade visual, interfaces e
-        peças que não parecem ter saído de um molde.
-      </p>
+      <p class="hero-sub">Criatividade que transforma ideias em presença visual.</p>
 
       <div class="hero-actions">
         <a href="#projetos" class="btn btn-primary">ver projetos</a>
@@ -73,12 +68,14 @@
     </div>
   </section>
 
+  <div class="torn-divider" aria-hidden="true"></div>
+
   <!-- SOBRE -->
   <section id="sobre" class="sobre">
     <div class="sobre-photo">
       <div class="polaroid">
         <div class="polaroid-img"></div>
-        <p class="polaroid-caption">clique* &nbsp; *não é bem um clique</p>
+        <p class="polaroid-caption">natália, em algum lugar criando</p>
       </div>
       <div class="tape tape-1"></div>
       <div class="tape tape-2"></div>
@@ -87,24 +84,30 @@
     <div class="sobre-text">
       <h2 class="section-title">sobre mim</h2>
       <p>
-        Sou designer gráfica e de interfaces, e gosto de projetos onde dá pra
-        colocar personalidade em cada detalhe — da paleta de cor ao texto de
-        um botão. Comecei brincando com colagem digital e hoje uso esse mesmo
-        olhar em identidades visuais e produtos digitais.
+        Olá, tudo bem? Eu sou a Natalia Dal Pozzo. Trabalho com design e
+        edição de vídeos há mais de 6 anos, sempre buscando transformar
+        ideia em algo que as pessoas realmente parem pra olhar.
       </p>
       <p>
-        Acredito em design com textura: nem tudo precisa ser limpo e
-        perfeitamente alinhado pra funcionar bem. Às vezes o "erro" é o que
-        fica na memória.
+        Já fiz artes para empresas como <strong>Neupar</strong>,
+        <strong>XBRI</strong> e <strong>NewZone</strong> — e adoro projetos
+        onde dá pra colocar personalidade em cada detalhe, do conceito à
+        peça final.
       </p>
 
       <ul class="tag-list">
-        <li>Identidade visual</li>
-        <li>UI Design</li>
-        <li>Figma</li>
-        <li>Ilustração digital</li>
-        <li>Motion básico</li>
-        <li>Direção de arte</li>
+        <li>Social Media Design</li>
+        <li>Design Digital</li>
+        <li>Publicidade e Comunicação Visual</li>
+        <li>Apresentações & E-books</li>
+        <li>Identidade Visual</li>
+        <li>Direção de Arte</li>
+        <li>Motion Design / Conteúdo em Vídeo</li>
+        <li>Web Design</li>
+        <li>OOH</li>
+        <li>Materiais Corporativos</li>
+        <li>Design Conceitual / Campanhas</li>
+        <li>Edição e Manipulação de Imagens</li>
       </ul>
     </div>
   </section>
@@ -112,33 +115,60 @@
   <!-- SERVIÇOS -->
   <section id="servicos" class="servicos">
     <h2 class="section-title">serviços</h2>
+    <p class="section-sub">design gráfico do conceito à entrega — em qualquer formato</p>
 
     <div class="servicos-grid">
-      <article class="service-card card-1">
+      <article class="service-card c-red">
         <span class="service-icon">◐</span>
-        <h3>Identidade visual</h3>
-        <p>Logo, paleta, tipografia e um sistema visual que se sustenta em qualquer aplicação — do post ao outdoor.</p>
+        <h3>Identidade Visual</h3>
+        <p>Logo, paleta e sistema visual completo, pensado pra funcionar em qualquer aplicação.</p>
       </article>
 
-      <article class="service-card card-2">
-        <span class="service-icon">▧</span>
-        <h3>UI Design</h3>
-        <p>Telas de site, app ou produto digital pensadas para uso real, com estilo próprio e nada de template genérico.</p>
-      </article>
-
-      <article class="service-card card-3">
-        <span class="service-icon">✧</span>
-        <h3>Social media</h3>
+      <article class="service-card c-blue">
+        <span class="service-icon">▣</span>
+        <h3>Design Digital & Social Media</h3>
         <p>Peças e templates de conteúdo com identidade consistente, prontos pra manter o feed com cara de marca.</p>
       </article>
 
-      <article class="service-card card-4">
+      <article class="service-card c-yellow">
         <span class="service-icon">⌁</span>
-        <h3>Direção de arte</h3>
+        <h3>Direção de Arte</h3>
         <p>Curadoria visual para campanhas, editoriais ou lançamentos — do moodboard até a entrega final.</p>
+      </article>
+
+      <article class="service-card c-red">
+        <span class="service-icon">▲</span>
+        <h3>Motion Design & Vídeo</h3>
+        <p>Conteúdo em vídeo e animação com edição própria, do roteiro ao corte final.</p>
+      </article>
+
+      <article class="service-card c-blue">
+        <span class="service-icon">▧</span>
+        <h3>Web Design</h3>
+        <p>Telas de site ou produto digital com estilo próprio, sem cara de template genérico.</p>
+      </article>
+
+      <article class="service-card c-yellow">
+        <span class="service-icon">✎</span>
+        <h3>Apresentações & E-books</h3>
+        <p>Materiais que organizam informação complexa em algo bonito e fácil de navegar.</p>
+      </article>
+
+      <article class="service-card c-red">
+        <span class="service-icon">◈</span>
+        <h3>Materiais Corporativos & OOH</h3>
+        <p>Do cartão de visita ao outdoor — peças impressas e de mídia externa com identidade forte.</p>
+      </article>
+
+      <article class="service-card c-blue">
+        <span class="service-icon">✦</span>
+        <h3>Design Conceitual & Campanhas</h3>
+        <p>Conceito criativo do zero pra campanhas que precisam de uma ideia central forte.</p>
       </article>
     </div>
   </section>
+
+  <div class="torn-divider" aria-hidden="true"></div>
 
   <!-- PROJETOS -->
   <section id="projetos" class="projetos">
@@ -158,7 +188,7 @@
         <div class="project-info">
           <h3>Nome do Projeto 01</h3>
           <p>Breve descrição do que foi feito e qual problema o projeto resolveu.</p>
-          <div class="project-tags"><span>Branding</span><span>UI</span></div>
+          <div class="project-tags"><span>Branding</span><span>Social Media</span></div>
         </div>
       </article>
 
@@ -173,7 +203,7 @@
         <div class="project-info">
           <h3>Nome do Projeto 02</h3>
           <p>Breve descrição do que foi feito e qual problema o projeto resolveu.</p>
-          <div class="project-tags"><span>App</span><span>UX</span></div>
+          <div class="project-tags"><span>Motion</span><span>Vídeo</span></div>
         </div>
       </article>
 
@@ -203,7 +233,7 @@
         <div class="project-info">
           <h3>Nome do Projeto 04</h3>
           <p>Breve descrição do que foi feito e qual problema o projeto resolveu.</p>
-          <div class="project-tags"><span>Identidade</span><span>Social</span></div>
+          <div class="project-tags"><span>Identidade</span><span>Campanha</span></div>
         </div>
       </article>
 
@@ -236,10 +266,10 @@
       </form>
 
       <div class="socials">
-        <a href="mailto:seuemail@exemplo.com">e-mail</a>
-        <a href="https://instagram.com" target="_blank" rel="noopener">instagram</a>
-        <a href="https://behance.net" target="_blank" rel="noopener">behance</a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener">linkedin</a>
+        <a href="mailto:nataliadalpozzopj@gmail.com.br">e-mail</a>
+        <a href="https://wa.me/5545999017550" target="_blank" rel="noopener">whatsapp</a>
+        <a href="https://www.instagram.com/_nataliadalpozzo_/" target="_blank" rel="noopener">instagram</a>
+        <a href="https://www.linkedin.com/in/natalia-dal-pozzo/" target="_blank" rel="noopener">linkedin</a>
       </div>
     </div>
   </section>
@@ -249,11 +279,11 @@
 <footer class="site-footer">
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
-      <span>design gráfico ✦ UI ✦ identidade visual ✦ direção de arte ✦ social media ✦ branding ✦ </span>
-      <span>design gráfico ✦ UI ✦ identidade visual ✦ direção de arte ✦ social media ✦ branding ✦ </span>
+      <span>identidade visual ✦ social media ✦ motion design ✦ direção de arte ✦ web design ✦ campanhas ✦ </span>
+      <span>identidade visual ✦ social media ✦ motion design ✦ direção de arte ✦ web design ✦ campanhas ✦ </span>
     </div>
   </div>
-  <p class="footer-credit">© <span id="year"></span> SEU NOME — feito à mão, sem template.</p>
+  <p class="footer-credit">© <span id="year"></span> Natalia Dal Pozzo — feito à mão, sem template.</p>
 </footer>
 
 <script src="script.js"></script>
