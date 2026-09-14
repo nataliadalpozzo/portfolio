@@ -16,14 +16,20 @@ navLinks.querySelectorAll("a").forEach((link) => {
   });
 });
 
-/* ---------- glitch de entrada no hero (uma vez, ao carregar) ---------- */
+/* ---------- glitch do hero: ao carregar, e depois a cada 7s ---------- */
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const glitchTitle = document.querySelector(".glitch");
 
 if (glitchTitle && !reduceMotion) {
-  window.addEventListener("load", () => {
-    setTimeout(() => glitchTitle.classList.add("run"), 250);
-  });
+  const runGlitch = () => {
+    glitchTitle.classList.remove("run");
+    // força reflow pra poder reiniciar a animação
+    void glitchTitle.offsetWidth;
+    glitchTitle.classList.add("run");
+  };
+
+  window.addEventListener("load", () => setTimeout(runGlitch, 250));
+  setInterval(runGlitch, 7000);
 }
 
 /* ---------- cursor blob (só em telas com mouse) ---------- */
