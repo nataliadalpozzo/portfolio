@@ -6,9 +6,9 @@
   --bg-panel:  #0d0d12;
   --ink:       #f3f1e9;
   --ink-soft:  #b3afa4;
-  --red:       #ff2b3d;
-  --blue:      #2a5cff;
-  --yellow:    #ffe400;
+  --red:       #fe0000;
+  --blue:      #0100ff;
+  --yellow:    #feff00;
   --line:      rgba(243,241,233,.14);
   --shadow-hard: 4px 4px 0 var(--red);
 
