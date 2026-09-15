@@ -77,9 +77,9 @@ form.addEventListener("submit", async (e) => {
       status.textContent = "obrigada! sua mensagem foi enviada com sucesso ✨";
       form.reset();
     } else {
-      status.textContent = "ops, deu algum erro. tenta pelo whatsapp!";
+      status.textContent = "ops, deu algum erro. tenta pele whatsapp!";
     }
   } catch (error) {
-    status.textContent = "ops, deu algum erro. tenta pelo whatsapp!";
+    status.textContent = "ops, deu algum erro. tente pelo whatsapp!";
   }
 });
