@@ -52,7 +52,7 @@ if (hasFinePointer && !reduceMotion) {
 /* ---------- formulário de contato via FormSubmit ---------- */
 const form = document.getElementById("contatoForm");
 const status = document.getElementById("formStatus");
-const ENDPOINT_FORMSUBMIT = "https://formsubmit.co/ajax/nataliadalpozzopj@gmail.com.br";
+const ENDPOINT_FORMSUBMIT = "https://formsubmit.co/ajax/nataliadalpozzopj@gmail.com";
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -77,9 +77,9 @@ form.addEventListener("submit", async (e) => {
       status.textContent = "obrigada! sua mensagem foi enviada com sucesso ✨";
       form.reset();
     } else {
-      status.textContent = "ops, deu algum erro. tenta pele whatsapp!";
+      status.textContent = "ops, deu algum erro. tenta pelo whatsapp!";
     }
   } catch (error) {
-    status.textContent = "ops, deu algum erro. tente pelo whatsapp!";
+    status.textContent = "ops, deu algum erro. tenta pelo whatsapp!";
   }
 });
