@@ -246,28 +246,32 @@
       <h2 class="section-title">bora fazer arte?</h2>
       <p class="section-sub">me conta sua ideia, respondo rapidinho</p>
 
-      <form class="contato-form" id="contatoForm">
-        <label>
-          nome
-          <input type="text" name="nome" required>
-        </label>
-        <label>
-          e-mail
-          <input type="email" name="email" required>
-        </label>
-        <label>
-          assunto
-          <input type="text" name="assunto" required>
-        </label>
-        <label>
-          mensagem
-          <textarea name="mensagem" rows="4" required></textarea>
-        </label>
-        <button type="submit" class="btn btn-primary btn-send">
-          <span class="btn-send-icon">💾</span> enviar
-        </button>
-        <p class="form-status" id="formStatus" role="status"></p>
-      </form>
+      
+        <form class="contato-form" id="contatoForm">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <label>
+       nome
+        <input type="text" name="nome" required>
+      </label>
+      <label>
+       e-mail
+       <input type="email" name="email" required>
+     </label>
+      <label>
+       assunto
+        <input type="text" name="assunto" required>
+      </label>
+      <label>
+       mensagem
+       <textarea name="mensagem" rows="4" required></textarea>
+      </label>
+     <button type="submit" class="btn btn-primary btn-send">
+       <span class="btn-send-icon">💾</span> enviar
+     </button>
+     <p class="form-status" id="formStatus" role="status"></p>
+    </form>
 
       <div class="socials">
         <a href="mailto:nataliadalpozzopj@gmail.com.br">e-mail</a>
