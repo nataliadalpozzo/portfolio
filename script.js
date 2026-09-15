@@ -49,26 +49,37 @@ if (hasFinePointer && !reduceMotion) {
   });
 }
 
-/* ---------- formulário de contato ---------- */
+/* ---------- formulário de contato via FormSubmit ---------- */
 const form = document.getElementById("contatoForm");
 const status = document.getElementById("formStatus");
-const DESTINO_EMAIL = "nataliadalpozzopj@gmail.com.br";
+const ENDPOINT_FORMSUBMIT = "https://formsubmit.co/ajax/nataliadalpozzopj@gmail.com.br";
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
+  status.textContent = "enviando mensagem...";
 
-  const nome = form.nome.value.trim();
-  const email = form.email.value.trim();
-  const assunto = form.assunto.value.trim();
-  const mensagem = form.mensagem.value.trim();
+  const formData = new FormData(form);
+  const dataObject = Object.fromEntries(formData.entries());
 
-  const corpo = `Nome: ${nome}\nE-mail: ${email}\n\n${mensagem}`;
-  const mailtoUrl =
-    `mailto:${DESTINO_EMAIL}` +
-    `?subject=${encodeURIComponent(assunto)}` +
-    `&body=${encodeURIComponent(corpo)}`;
+  try {
+    const response = await fetch(ENDPOINT_FORMSUBMIT, {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(dataObject)
+    });
 
-  window.location.href = mailtoUrl;
+    const result = await response.json();
 
-  status.textContent = "abrindo seu app de e-mail com a mensagem pronta pra enviar...";
+    if (response.ok) {
+      status.textContent = "obrigada! sua mensagem foi enviada com sucesso ✨";
+      form.reset();
+    } else {
+      status.textContent = "ops, deu algum erro. tenta pelo whatsapp!";
+    }
+  } catch (error) {
+    status.textContent = "ops, deu algum erro. tenta pelo whatsapp!";
+  }
 });
