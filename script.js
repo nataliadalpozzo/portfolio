@@ -1,85 +1,62 @@
-document.getElementById("year").textContent = new Date().getFullYear();
+// ===== CUSTOM CURSOR =====
+const dot = document.querySelector(".cursor-dot");
+const ring = document.querySelector(".cursor-ring");
 
-/* ---------- menu mobile ---------- */
-const navToggle = document.getElementById("navToggle");
-const navLinks = document.getElementById("navLinks");
+let mouseX = 0, mouseY = 0;
+let ringX = 0, ringY = 0;
 
-navToggle.addEventListener("click", () => {
-  const isOpen = navLinks.classList.toggle("is-open");
-  navToggle.setAttribute("aria-expanded", String(isOpen));
+window.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+  dot.style.left = mouseX + "px";
+  dot.style.top = mouseY + "px";
 });
 
-navLinks.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("is-open");
-    navToggle.setAttribute("aria-expanded", "false");
-  });
+function animateRing() {
+  ringX += (mouseX - ringX) * 0.16;
+  ringY += (mouseY - ringY) * 0.16;
+  ring.style.left = ringX + "px";
+  ring.style.top = ringY + "px";
+  requestAnimationFrame(animateRing);
+}
+animateRing();
+
+document.querySelectorAll("a, button, .servico-item, .projeto-card").forEach(el => {
+  el.addEventListener("mouseenter", () => ring.classList.add("hover"));
+  el.addEventListener("mouseleave", () => ring.classList.remove("hover"));
 });
 
-/* ---------- glitch do hero: ao carregar, e depois a cada 7s ---------- */
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-const glitchTitle = document.querySelector(".glitch");
+// ===== SCROLL REVEAL =====
+const revealEls = document.querySelectorAll(".reveal");
 
-if (glitchTitle && !reduceMotion) {
-  const runGlitch = () => {
-    glitchTitle.classList.remove("run");
-    // força reflow pra poder reiniciar a animação
-    void glitchTitle.offsetWidth;
-    glitchTitle.classList.add("run");
-  };
-
-  window.addEventListener("load", () => setTimeout(runGlitch, 250));
-  setInterval(runGlitch, 7000);
-}
-
-/* ---------- cursor blob (só em telas com mouse) ---------- */
-const cursorBlob = document.getElementById("cursorBlob");
-const hasFinePointer = window.matchMedia("(pointer: fine)").matches;
-
-if (hasFinePointer && !reduceMotion) {
-  window.addEventListener("mousemove", (e) => {
-    cursorBlob.style.left = `${e.clientX}px`;
-    cursorBlob.style.top = `${e.clientY}px`;
-    cursorBlob.classList.add("is-visible");
-  });
-
-  document.querySelectorAll("a, button, .project-card, .service-card").forEach((el) => {
-    el.addEventListener("mouseenter", () => cursorBlob.classList.add("is-active"));
-    el.addEventListener("mouseleave", () => cursorBlob.classList.remove("is-active"));
-  });
-}
-
-/* ---------- formulário de contato via FormSubmit ---------- */
-const form = document.getElementById("contatoForm");
-const status = document.getElementById("formStatus");
-const ENDPOINT_FORMSUBMIT = "https://formsubmit.co/ajax/nataliadalpozzopj@gmail.com";
-
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  status.textContent = "enviando mensagem...";
-
-  const formData = new FormData(form);
-  const dataObject = Object.fromEntries(formData.entries());
-
-  try {
-    const response = await fetch(ENDPOINT_FORMSUBMIT, {
-      method: "POST",
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify(dataObject)
-    });
-
-    const result = await response.json();
-
-    if (response.ok) {
-      status.textContent = "obrigada! sua mensagem foi enviada com sucesso ✨";
-      form.reset();
-    } else {
-      status.textContent = "ops, deu algum erro. tenta pelo whatsapp!";
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add("in"), i * 60);
+      observer.unobserve(entry.target);
     }
-  } catch (error) {
-    status.textContent = "ops, deu algum erro. tenta pelo whatsapp!";
+  });
+}, { threshold: 0.15 });
+
+revealEls.forEach(el => observer.observe(el));
+
+// ===== MOBILE MENU =====
+const menuToggle = document.getElementById("menuToggle");
+const mobileNav = document.getElementById("mobileNav");
+
+menuToggle.addEventListener("click", () => {
+  mobileNav.classList.toggle("open");
+});
+
+mobileNav.querySelectorAll("a").forEach(a => {
+  a.addEventListener("click", () => mobileNav.classList.remove("open"));
+});
+
+// ===== HERO BG TEXT PARALLAX =====
+const bgText = document.querySelector(".hero-bg-text");
+window.addEventListener("scroll", () => {
+  const scrolled = window.scrollY;
+  if (bgText) {
+    bgText.style.transform = `translate(-50%, calc(-50% + ${scrolled * 0.25}px))`;
   }
 });
