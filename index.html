@@ -3,281 +3,203 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Natalia Dal Pozzo — Design Gráfico & Vídeos</title>
-<meta name="description" content="Portfólio de Natalia Dal Pozzo. Design gráfico, identidade visual, social media e motion design.">
-
-<!--
-  COMO CUSTOMIZAR ESTE ARQUIVO
-  1. Na seção #projetos, troque os 4 blocos .project-card por seus projetos reais
-     (título, descrição, tags e, se quiser, uma imagem real no lugar do .thumb-glitch).
-  2. O formulário de contato não envia nada sozinho — ele só mostra uma mensagem
-     de confirmação (script.js, função handleFormSubmit). Para receber e-mails de
-     verdade, plugue um serviço como Formspree, EmailJS ou um endpoint seu.
--->
-
+<title>Natalia Dal Pozzo — Design Gráfico & Vídeo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="grain" aria-hidden="true"></div>
-<div class="scanlines" aria-hidden="true"></div>
-<div class="cursor-blob" id="cursorBlob" aria-hidden="true"></div>
+<div class="grain"></div>
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
 
-<header class="nav">
-  <a href="#hero" class="logo">Natalia Dal Pozzo</a>
+<div class="loader" id="loader">
+  <span class="loader-text">ND</span>
+</div>
 
-  <button class="nav-toggle" id="navToggle" aria-label="abrir menu" aria-expanded="false">
+<header class="site-header">
+  <a href="#top" class="logo">ND<span class="logo-dot">.</span></a>
+  <nav class="nav">
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <div class="freela-sticker">
+    <span>★ disponível para freelas ★</span>
+  </div>
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
     <span></span><span></span><span></span>
   </button>
-
-  <nav class="nav-links" id="navLinks">
-    <a href="#sobre">sobre</a>
-    <a href="#servicos">serviços</a>
-    <a href="#projetos">projetos</a>
-    <a href="#contato" class="nav-cta">fale comigo</a>
-  </nav>
 </header>
 
-<main>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="#sobre">Sobre</a>
+  <a href="#servicos">Serviços</a>
+  <a href="#projetos">Projetos</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<main id="top">
 
   <!-- HERO -->
-  <section id="hero" class="hero">
-    <div class="splatter splatter-1" aria-hidden="true"></div>
-    <div class="splatter splatter-2" aria-hidden="true"></div>
-    <div class="splatter splatter-3" aria-hidden="true"></div>
-
-    <div class="hero-inner">
-      <p class="sticker sticker-status">✦ disponível para freelas</p>
-
-      <h1 class="hero-title glitch" data-text="Natalia Dal Pozzo">Natalia Dal Pozzo</h1>
-
-      <p class="hero-sub">Criatividade que transforma ideias em presença visual.</p>
-
-      <div class="hero-actions">
-        <a href="#projetos" class="btn btn-primary">ver projetos</a>
-        <a href="#contato" class="btn btn-ghost">bora conversar</a>
-      </div>
+  <section class="hero">
+    <div class="hero-bg-text">DESIGN</div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">designer gráfica &amp; editora de vídeo</p>
+      <h1 class="hero-title" id="heroTitle">
+        <span class="line" data-text="Criatividade que">Criatividade que</span>
+        <span class="line" data-text="transforma ideias em">transforma ideias em</span>
+        <span class="line accent" data-text="presença visual.">presença visual.</span>
+      </h1>
+      <p class="hero-sub">Natalia Dal Pozzo — mais de 6 anos criando identidade, movimento e imagem para marcas que não querem passar despercebidas.</p>
+      <a href="#projetos" class="hero-cta">
+        <span>ver projetos</span>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 14L14 4M14 4H6M14 4V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
     </div>
-
-    <div class="scroll-hint" aria-hidden="true">
+    <div class="scroll-hint">
       <span></span>
+      role para explorar
     </div>
   </section>
 
-  <div class="torn-divider" aria-hidden="true"></div>
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>Social Media Design</span><span>·</span>
+      <span>Identidade Visual</span><span>·</span>
+      <span>Motion Design</span><span>·</span>
+      <span>Direção de Arte</span><span>·</span>
+      <span>Web Design</span><span>·</span>
+      <span>Edição de Vídeo</span><span>·</span>
+      <span>Social Media Design</span><span>·</span>
+      <span>Identidade Visual</span><span>·</span>
+      <span>Motion Design</span><span>·</span>
+      <span>Direção de Arte</span><span>·</span>
+      <span>Web Design</span><span>·</span>
+      <span>Edição de Vídeo</span><span>·</span>
+    </div>
+  </div>
 
   <!-- SOBRE -->
-  <section id="sobre" class="sobre">
-    <div class="sobre-photo">
-      <div class="polaroid">
-        <img src="dfsfsdfsdfsd.jpg" alt="Natalia Dal Pozzo" class="polaroid-img">
-        <p class="polaroid-caption">Essa sou eu ;)</p>
+  <section class="sobre" id="sobre">
+    <div class="sobre-inner reveal">
+      <span class="section-tag">sobre mim</span>
+      <h2 class="sobre-title">
+        Eu penso em imagem, cor e movimento antes de pensar em qualquer outra coisa.
+      </h2>
+      <div class="sobre-grid">
+        <p class="sobre-text">
+          Trabalho com design gráfico e edição de vídeo há mais de 6 anos, transitando entre identidade visual, social media e motion. Já criei peças para marcas como Neupar, XBRI e NewZone — sempre buscando um resultado que tenha cara própria, nunca de template.
+        </p>
+        <div class="sobre-stats">
+          <div class="stat">
+            <span class="stat-number">6+</span>
+            <span class="stat-label">anos de experiência</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">3</span>
+            <span class="stat-label">marcas atendidas</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">∞</span>
+            <span class="stat-label">ideias em movimento</span>
+          </div>
+        </div>
       </div>
-      <div class="tape tape-1"></div>
-      <div class="tape tape-2"></div>
-    </div>
-
-    <div class="sobre-text">
-      <h2 class="section-title">sobre mim</h2>
-      <p>
-        Olá, tudo bem? Eu sou a Natalia Dal Pozzo. Trabalho com design e
-        edição de vídeos há mais de 6 anos, sempre buscando transformar
-        ideia em algo que as pessoas realmente parem pra olhar.
-      </p>
-      <p>
-        Já fiz artes para empresas como <strong>Neupar</strong>,
-        <strong>XBRI</strong> e <strong>NewZone</strong> — e adoro projetos
-        onde dá pra colocar personalidade em cada detalhe, do conceito à
-        peça final.
-      </p>
-
-      <ul class="tag-list">
-        <li>Social Media Design</li>
-        <li>Design Digital</li>
-        <li>Publicidade e Comunicação Visual</li>
-        <li>Apresentações & E-books</li>
-        <li>Identidade Visual</li>
-        <li>Direção de Arte</li>
-        <li>Motion Design / Conteúdo em Vídeo</li>
-        <li>Web Design</li>
-        <li>OOH</li>
-        <li>Materiais Corporativos</li>
-        <li>Design Conceitual / Campanhas</li>
-        <li>Edição e Manipulação de Imagens</li>
-      </ul>
     </div>
   </section>
 
   <!-- SERVIÇOS -->
-  <section id="servicos" class="servicos">
-    <h2 class="section-title">serviços</h2>
-    <p class="section-sub">Design gráfico do conceito à entrega, em qualquer formato!</p>
-
+  <section class="servicos" id="servicos">
+    <span class="section-tag reveal">serviços</span>
+    <h2 class="servicos-title reveal">O que eu faço</h2>
     <div class="servicos-grid">
-      <article class="service-card c-red">
-        <span class="service-icon">◐</span>
-        <h3>Identidade Visual</h3>
-        <p>Logo, paleta e sistema visual completo, pensado pra funcionar em qualquer aplicação.</p>
-      </article>
-
-      <article class="service-card c-blue">
-        <span class="service-icon">▣</span>
-        <h3>Design Digital & Social Media</h3>
-        <p>Peças e templates de conteúdo com identidade consistente, prontos pra manter o feed com cara de marca.</p>
-      </article>
-
-      <article class="service-card c-yellow">
-        <span class="service-icon">⌁</span>
-        <h3>Direção de Arte</h3>
-        <p>Curadoria visual para campanhas, editoriais ou lançamentos, do moodboard até a entrega final.</p>
-      </article>
-
-      <article class="service-card c-red">
-        <span class="service-icon">▲</span>
-        <h3>Motion Design & Vídeo</h3>
-        <p>Conteúdo em vídeo e animação com edição própria, do roteiro ao corte final.</p>
-      </article>
-
-      <article class="service-card c-blue">
-        <span class="service-icon">▧</span>
-        <h3>Web Design</h3>
-        <p>Telas de site ou produto digital com estilo próprio, sem cara de template genérico.</p>
-      </article>
-
-      <article class="service-card c-yellow">
-        <span class="service-icon">✎</span>
-        <h3>Apresentações & E-books</h3>
-        <p>Materiais que organizam informação complexa em algo bonito e fácil de navegar.</p>
-      </article>
-
-      <article class="service-card c-red">
-        <span class="service-icon">◈</span>
-        <h3>Materiais Corporativos & OOH</h3>
-        <p>Do cartão de visita ao outdoor, peças impressas e de mídia externa com identidade forte.</p>
-      </article>
-
-      <article class="service-card c-blue">
-        <span class="service-icon">✦</span>
-        <h3>Design Conceitual & Campanhas</h3>
-        <p>Conceito criativo do zero pra campanhas que precisam de uma ideia central forte.</p>
-      </article>
+      <div class="servico-item reveal"><h3>Social Media Design</h3></div>
+      <div class="servico-item reveal"><h3>Design Digital</h3></div>
+      <div class="servico-item reveal"><h3>Publicidade &amp; Comunicação Visual</h3></div>
+      <div class="servico-item reveal"><h3>Apresentações &amp; E-books</h3></div>
+      <div class="servico-item reveal"><h3>Identidade Visual</h3></div>
+      <div class="servico-item reveal"><h3>Direção de Arte</h3></div>
+      <div class="servico-item reveal"><h3>Motion Design &amp; Conteúdo em Vídeo</h3></div>
+      <div class="servico-item reveal"><h3>Web Design</h3></div>
+      <div class="servico-item reveal"><h3>OOH</h3></div>
+      <div class="servico-item reveal"><h3>Materiais Corporativos</h3></div>
+      <div class="servico-item reveal"><h3>Design Conceitual &amp; Campanhas</h3></div>
+      <div class="servico-item reveal"><h3>Edição &amp; Manipulação de Imagens</h3></div>
     </div>
   </section>
 
-  <div class="torn-divider" aria-hidden="true"></div>
-
   <!-- PROJETOS -->
-  <section id="projetos" class="projetos">
-    <h2 class="section-title">projetos</h2>
-    <p class="section-sub">Uma breve seleção de trabalhos recentes, tem muitos outros!</p>
-
+  <section class="projetos" id="projetos">
+    <span class="section-tag reveal">projetos</span>
+    <h2 class="projetos-title reveal">Alguns trabalhos</h2>
     <div class="projetos-grid">
-
-      <article class="project-card">
-        <div class="window">
-          <div class="window-bar">
-            <span></span><span></span><span></span>
-            <p class="window-url">newzone.site</p>
-          </div>
-          <img src="REPRESENTAÇÃO - NEWZONE (1).png" alt="Representação — Newzone" class="thumb-glitch thumb-1">
+      <article class="projeto-card reveal">
+        <div class="projeto-media">
+          <div class="projeto-placeholder">MOCKUP 01</div>
         </div>
-        <div class="project-info">
-          <h3>Mega Painel Newzone</h3>
-          <p>Projeto criado para a prospecção do cliente na compra de um Mega Painel iluminado de 26x8m.</p>
-          <div class="project-tags"><span>Identidade Visual</span><span>Social Media</span></div>
+        <div class="projeto-info">
+          <h3>Identidade Visual</h3>
+          <p>Sistema de marca e aplicações</p>
         </div>
       </article>
-
-      <article class="project-card">
-        <div class="window">
-          <div class="window-bar">
-            <span></span><span></span><span></span>
-            <p class="window-url">unimed.site</p>
-          </div>
-          <img src="UNIMED - OUTUBRO ROSA E NOVEMBRO AZUL (1).png" alt="Unimed — Outubro Rosa e Novembro Azul" class="thumb-glitch thumb-2">
+      <article class="projeto-card reveal">
+        <div class="projeto-media">
+          <div class="projeto-placeholder">MOCKUP 02</div>
         </div>
-        <div class="project-info">
-          <h3>Unimed — Outubro Rosa & Novembro Azul</h3>
-          <p>Projeto de Outdoor urbano criado para a campanha do Outubro Rosa e Novembro azul na cidade de Medianeira-PR, contendo um relógio que atualiza em tempo real, mostranto que toda hora é hora de previnir.</p>
-          <div class="project-tags"><span>Campanha</span><span>Social Media</span></div>
+        <div class="projeto-info">
+          <h3>Social Media</h3>
+          <p>Campanha para feed e stories</p>
         </div>
       </article>
-
-      <article class="project-card">
-        <div class="window">
-          <div class="window-bar">
-            <span></span><span></span><span></span>
-            <p class="window-url">projeto-tres.site</p>
-          </div>
-          <img src="1 (2).png" alt="Nome do Projeto 03" class="thumb-glitch thumb-3">
+      <article class="projeto-card reveal">
+        <div class="projeto-media">
+          <div class="projeto-placeholder">MOCKUP 03</div>
         </div>
-        <div class="project-info">
-          <h3>Silvana Dal Pozzo - Instagram</h3>
-          <p>Uma breve demonstração de criação de carrosséis para as redes sociais. Quer ver mais? Me envie uma mensagem no WhatsApp, tem muuuito mais :).</p>
-          <div class="project-tags"><span>Editorial</span><span>Print</span></div>
+        <div class="projeto-info">
+          <h3>Motion Design</h3>
+          <p>Peça animada para vídeo</p>
         </div>
       </article>
-
-      <article class="project-card">
-        <div class="window">
-          <div class="window-bar">
-            <span></span><span></span><span></span>
-            <p class="window-url">ledlunna.site</p>
-          </div>
-          <img src="Cópia de Led Lunna Medianeira (5).png" alt="Led Lunna — Medianeira" class="thumb-glitch thumb-4">
+      <article class="projeto-card reveal">
+        <div class="projeto-media">
+          <div class="projeto-placeholder">MOCKUP 04</div>
         </div>
-        <div class="project-info">
-          <h3>Painel de LED 2x4m</h3>
-          <p>Capa para apresentação comercial da venda de um LED imponente na principal avenida da cidade, com alta visibilidade dos moradores e visitantes.</p>
-          <div class="project-tags"><span>Identidade</span><span>Materiais</span></div>
+        <div class="projeto-info">
+          <h3>Direção de Arte</h3>
+          <p>Conceito visual de campanha</p>
         </div>
       </article>
-
     </div>
+    <p class="projetos-note reveal">* substitua os mockups pelas imagens reais dos seus projetos.</p>
   </section>
 
   <!-- CONTATO -->
-  <section id="contato" class="contato">
-    <div class="contato-inner">
-      <h2 class="section-title">bora fazer arte?</h2>
-      <p class="section-sub">me conta sua ideia, respondo rapidinho</p>
-
-      
-        <form class="contato-form" id="contatoForm">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-
-      <label>
-       nome
-        <input type="text" name="nome" required>
-      </label>
-      <label>
-       e-mail
-       <input type="email" name="email" required>
-     </label>
-      <label>
-       assunto
-        <input type="text" name="assunto" required>
-      </label>
-      <label>
-       mensagem
-       <textarea name="mensagem" rows="4" required></textarea>
-      </label>
-     <button type="submit" class="btn btn-primary btn-send">
-       <span class="btn-send-icon">💾</span> enviar
-     </button>
-     <p class="form-status" id="formStatus" role="status"></p>
-    </form>
-
-      <div class="socials">
-        <a href="mailto:nataliadalpozzopj@gmail.com.br">e-mail</a>
-        <a href="https://wa.me/5545999017550" target="_blank" rel="noopener">whatsapp</a>
-        <a href="https://www.instagram.com/_nataliadalpozzo_/" target="_blank" rel="noopener">instagram</a>
-        <a href="https://www.linkedin.com/in/natalia-dal-pozzo/" target="_blank" rel="noopener">linkedin</a>
+  <section class="contato" id="contato">
+    <div class="contato-inner reveal">
+      <span class="section-tag">contato</span>
+      <h2 class="contato-title">Vamos criar<br>algo juntos?</h2>
+      <div class="contato-links">
+        <a href="mailto:nataliadalpozzopj@gmail.com.br" class="contato-link">
+          <span>E-mail</span>
+          <strong>nataliadalpozzopj@gmail.com.br</strong>
+        </a>
+        <a href="https://wa.me/5545999017550" target="_blank" rel="noopener" class="contato-link">
+          <span>WhatsApp</span>
+          <strong>(45) 99901-7550</strong>
+        </a>
+        <a href="https://www.instagram.com/_nataliadalpozzo_/" target="_blank" rel="noopener" class="contato-link">
+          <span>Instagram</span>
+          <strong>@_nataliadalpozzo_</strong>
+        </a>
+        <a href="https://www.linkedin.com/in/natalia-dal-pozzo/" target="_blank" rel="noopener" class="contato-link">
+          <span>LinkedIn</span>
+          <strong>natalia-dal-pozzo</strong>
+        </a>
       </div>
     </div>
   </section>
@@ -285,13 +207,8 @@
 </main>
 
 <footer class="site-footer">
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>identidade visual ✦ social media ✦ motion design ✦ direção de arte ✦ web design ✦ campanhas ✦ </span>
-      <span>identidade visual ✦ social media ✦ motion design ✦ direção de arte ✦ web design ✦ campanhas ✦ </span>
-    </div>
-  </div>
-  <p class="footer-credit">© <span id="year"></span> Natalia Dal Pozzo — feito à mão, sem template.</p>
+  <span>Natalia Dal Pozzo © 2026</span>
+  <span>feito com café e Illustrator</span>
 </footer>
 
 <script src="script.js"></script>
