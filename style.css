@@ -446,3 +446,270 @@ section{ padding: 140px var(--edge) 100px; position:relative; }
 @media (prefers-reduced-motion: reduce){
   *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; scroll-behavior:auto !important; }
 }
+
+/* =========================================================
+   MOTION POLISH — intro, cursor, balões e microinterações
+   ========================================================= */
+
+body.is-loading{ overflow:hidden; }
+
+/* ---------- abertura ---------- */
+.site-loader{
+  position:fixed;
+  inset:0;
+  z-index:15000;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  background:var(--ink);
+  color:var(--bg);
+  clip-path:inset(0 0 0 0);
+}
+.loader-inner{
+  position:relative;
+  z-index:2;
+  width:min(560px, 82vw);
+  text-align:center;
+}
+.loader-star{
+  width:54px;
+  height:54px;
+  margin:0 auto 20px;
+  display:grid;
+  place-items:center;
+  border:2px solid rgba(239,238,232,.72);
+  border-radius:50%;
+  color:var(--lime);
+  font-size:1.85rem;
+}
+.loader-kicker,
+.loader-status{
+  font-family:var(--hand);
+  letter-spacing:.02em;
+}
+.loader-kicker{ font-size:clamp(1rem, 2vw, 1.25rem); color:#d7d7d1; }
+.loader-name{
+  margin:4px 0 18px;
+  display:flex;
+  justify-content:center;
+  overflow:hidden;
+  font-family:var(--serif);
+  font-size:clamp(4.8rem, 15vw, 10rem);
+  font-weight:700;
+  line-height:.95;
+  letter-spacing:-.08em;
+}
+.loader-name span{ display:inline-block; }
+.loader-dot{ color:var(--lime); }
+.loader-line{
+  width:min(300px, 60vw);
+  height:2px;
+  margin:0 auto 14px;
+  overflow:hidden;
+  background:rgba(239,238,232,.22);
+}
+.loader-line span{
+  display:block;
+  width:100%;
+  height:100%;
+  background:var(--lime);
+  transform:scaleX(0);
+  transform-origin:left;
+}
+.loader-status{ font-size:1.02rem; color:#bdbdb8; }
+.loader-blob{
+  position:absolute;
+  width:clamp(210px, 33vw, 480px);
+  aspect-ratio:1;
+  border-radius:43% 57% 61% 39% / 54% 39% 61% 46%;
+  opacity:.95;
+  filter:blur(.2px);
+}
+.loader-blob-1{ left:-8vw; top:-12vw; background:var(--lilac); transform:rotate(-18deg); }
+.loader-blob-2{ right:-10vw; bottom:-15vw; background:var(--lime); transform:rotate(16deg); }
+.loader-fallback-out{ opacity:0; visibility:hidden; transition:opacity .5s ease, visibility .5s ease; }
+
+/* ---------- cursor mais ágil ---------- */
+.cursor{
+  width:26px;
+  height:26px;
+  display:grid;
+  place-items:center;
+  transition:none;
+  will-change:transform;
+}
+.cursor-core{
+  width:26px;
+  height:26px;
+  display:grid;
+  place-items:center;
+  transform-origin:center;
+  transition:transform .14s cubic-bezier(.2,.9,.2,1), color .16s ease, filter .16s ease;
+}
+.cursor-core svg{ width:100%; height:100%; }
+.cursor.big{ transform:none; }
+.cursor.big .cursor-core{
+  transform:scale(1.75) rotate(18deg);
+  filter:drop-shadow(0 2px 0 rgba(50,50,50,.18));
+}
+.cursor-word{
+  left:0;
+  top:0;
+  transform:translate(-50%,-165%) rotate(-6deg);
+  transition:none;
+  will-change:transform, opacity;
+}
+.cursor-word.show{ transform:translate(-50%,-165%) rotate(-6deg); }
+
+/* ---------- mais vida no hero ---------- */
+.hero-visual{ isolation:isolate; }
+.float-bubble{
+  position:absolute;
+  z-index:4;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:82px;
+  padding:9px 15px 10px;
+  border:2px solid var(--ink);
+  border-radius:999px;
+  background:#fff;
+  box-shadow:5px 6px 0 rgba(50,50,50,.14);
+  font-family:var(--hand);
+  font-size:1.12rem;
+  line-height:1;
+  white-space:nowrap;
+  user-select:none;
+  transform:translateZ(0);
+  transition:box-shadow .22s ease, background .22s ease, color .22s ease;
+}
+.float-bubble:hover{
+  background:var(--ink);
+  color:var(--bg);
+  box-shadow:2px 3px 0 rgba(50,50,50,.15);
+}
+.bubble-1{ top:6%; left:-8%; background:var(--lime); transform:rotate(-7deg); }
+.bubble-2{ right:-12%; top:42%; background:var(--lilac); transform:rotate(6deg); }
+.bubble-3{ left:2%; bottom:1%; transform:rotate(-4deg); }
+
+.polaroid,
+.scribble,
+.washi,
+.float-bubble{ will-change:transform; }
+
+/* ---------- hover nos elementos “de papel” ---------- */
+.tape,
+.photo-frame,
+.skill-chip,
+.servico-item,
+.contato-link,
+.proj-card{
+  will-change:transform;
+}
+.tape{ transition:box-shadow .25s ease, background .25s ease; }
+.tape:hover{
+  background:var(--lime);
+  box-shadow:0 10px 22px rgba(50,50,50,.18);
+}
+.photo-frame{ transition:box-shadow .28s ease; }
+.photo-frame:hover{ box-shadow:0 24px 44px rgba(50,50,50,.19); }
+.photo-placeholder span{ transition:transform .25s ease; }
+.photo-frame:hover .photo-placeholder span{ transform:scale(1.08) rotate(-2deg); }
+
+.skill-chip{
+  transition:box-shadow .2s ease, background .2s ease, color .2s ease;
+  cursor:default;
+}
+.skill-chip:hover{
+  background:var(--ink) !important;
+  color:var(--bg);
+  box-shadow:4px 5px 0 var(--lilac);
+}
+
+/* ---------- cards 3D ---------- */
+.portfolio-grid{ perspective:1200px; }
+.proj-card{
+  transform-style:preserve-3d;
+  backface-visibility:hidden;
+  overflow:hidden;
+  transition:box-shadow .3s ease;
+}
+.proj-card:hover{
+  box-shadow:0 24px 42px rgba(50,50,50,.2);
+  transform:none;
+}
+.proj-photo{ transform-origin:center; will-change:transform; }
+.proj-info{ position:relative; z-index:2; background:#fff; }
+.proj-card .proj-tag{ display:inline-block; transition:transform .25s ease; }
+.proj-card:hover .proj-tag{ transform:translateX(5px) rotate(-2deg); }
+.proj-card h3{ transition:letter-spacing .25s ease; }
+.proj-card:hover h3{ letter-spacing:.005em; }
+
+/* ---------- serviços com reação ---------- */
+.servico-item{
+  position:relative;
+  transition:padding-left .28s ease, padding-right .28s ease, background .28s ease;
+}
+.servico-item::before{
+  content:'✦';
+  position:absolute;
+  left:0;
+  top:50%;
+  transform:translate(-18px,-50%) scale(0) rotate(-60deg);
+  color:var(--ink);
+  font-size:1rem;
+  transition:transform .32s cubic-bezier(.2,.85,.2,1.35);
+}
+.servico-item:hover{
+  padding-left:26px;
+  padding-right:18px;
+  background:rgba(225,212,240,.38);
+}
+.servico-item:hover::before{ transform:translate(7px,-50%) scale(1) rotate(0); }
+.servico-item h3{ transition:transform .25s ease; }
+.servico-item:hover h3{ transform:translateX(7px); }
+
+/* ---------- contato ---------- */
+.contato-link{ position:relative; overflow:hidden; }
+.contato-link::after{
+  content:'↗';
+  position:absolute;
+  right:24px;
+  top:50%;
+  transform:translateY(-50%) translateX(16px) rotate(-18deg);
+  opacity:0;
+  font-family:var(--serif);
+  font-size:1.6rem;
+  transition:opacity .22s ease, transform .28s ease;
+}
+.contato-link:hover::after{
+  opacity:1;
+  transform:translateY(-50%) translateX(0) rotate(0);
+}
+
+/* destaque “desenhado” aparece animado */
+.mark{
+  background-repeat:no-repeat;
+  background-position:left bottom;
+}
+
+/* mobile: mantém bonito sem elementos saindo da tela */
+@media (max-width: 880px){
+  .bubble-1{ left:2%; top:2%; }
+  .bubble-2{ right:0; top:42%; }
+  .bubble-3{ left:8%; bottom:-2%; }
+  .float-bubble{ font-size:1rem; padding:8px 12px 9px; }
+}
+
+@media (max-width: 560px){
+  .loader-name{ font-size:clamp(4.1rem, 24vw, 7rem); }
+  .loader-blob{ width:60vw; }
+  .bubble-2{ right:-3%; }
+  .float-bubble{ min-width:0; }
+  .servico-item:hover{ padding-left:20px; padding-right:8px; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .site-loader{ display:none; }
+  body.is-loading{ overflow:auto; }
+}
