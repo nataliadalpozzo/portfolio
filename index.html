@@ -1,382 +1,273 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nat — Social Media & Design</title>
-  <meta name="description" content="Portfólio de Natalia Dal Pozzo — social media e design gráfico com uma pegada editorial, criativa e feita à mão.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nat — Social Media &amp; Design</title>
+<meta name="description" content="Portfólio de Natalia Dal Pozzo — social media e design gráfico com uma pegada editorial e feita à mão.">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./style.css">
 </head>
-
 <body class="is-loading">
 
-  <!-- ABERTURA -->
-  <div class="site-loader" id="siteLoader" aria-hidden="true">
-    <div class="loader-shape loader-shape-a"></div>
-    <div class="loader-shape loader-shape-b"></div>
-
-    <div class="loader-center">
-      <span class="loader-star">✦</span>
-      <p class="loader-mini">social media • design • conteúdo</p>
-
-      <div class="loader-word" aria-label="Nat.">
-        <span>N</span><span>a</span><span>t</span><span class="loader-dot">.</span>
-      </div>
-
-      <div class="loader-progress"><span></span></div>
-      <p class="loader-status">organizando umas ideias bonitas...</p>
+<!-- abertura animada -->
+<div class="site-loader" id="siteLoader" aria-hidden="true">
+  <div class="loader-blob loader-blob-1"></div>
+  <div class="loader-blob loader-blob-2"></div>
+  <div class="loader-inner">
+    <div class="loader-star">✦</div>
+    <p class="loader-kicker">social media • design • conteúdo</p>
+    <div class="loader-name" aria-label="Nat.">
+      <span>N</span><span>a</span><span>t</span><span class="loader-dot">.</span>
     </div>
+    <div class="loader-line"><span></span></div>
+    <p class="loader-status">montando ideias bonitas...</p>
   </div>
+</div>
 
-  <!-- CURSOR -->
-  <div class="cursor" id="cursor" aria-hidden="true">
-    <div class="cursor-star">
-      <svg viewBox="0 0 24 24">
-        <path d="M12 0 L14.5 8.5 L23 9 L15.8 13.8 L18.5 22 L12 16.8 L5.5 22 L8.2 13.8 L1 9 L9.5 8.5 Z" fill="currentColor"/>
-      </svg>
+<!-- cursor custom -->
+<div class="cursor" id="cursor">
+  <div class="cursor-core">
+    <svg viewBox="0 0 24 24" width="22" height="22">
+      <path d="M12 0 L14.5 8.5 L23 9 L15.8 13.8 L18.5 22 L12 16.8 L5.5 22 L8.2 13.8 L1 9 L9.5 8.5 Z" fill="currentColor"/>
+    </svg>
+  </div>
+</div>
+
+<!-- grão de papel -->
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a href="#topo" class="logo" data-cursor-word="topo">Nat<span class="logo-dot">.</span></a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#sobre" data-cursor-word="ver">sobre</a>
+    <a href="#portfolio" data-cursor-word="ver">portfólio</a>
+    <a href="#servicos" data-cursor-word="ver">serviços</a>
+    <a href="#contato" class="nav-cta" data-cursor-word="ir">contato</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="topo">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="tape tape-1" aria-hidden="true">disponível pra novos projetos</div>
+
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow-hand">olá, muito prazer —</p>
+        <h1 class="hero-title">
+          <span class="line">Design que</span>
+          <span class="line">para o <em class="mark mark-lime">scroll</em></span>
+          <span class="line">e fica na <em class="mark mark-lilac">memória</em>.</span>
+        </h1>
+        <p class="hero-sub">Sou a Natalia — Nat pra quem me conhece. Transformo marca, conteúdo e feed em algo que as pessoas realmente param pra olhar duas vezes.</p>
+        <div class="hero-actions">
+          <a href="#contato" class="btn btn-primary" data-cursor-word="ir">vamos conversar</a>
+          <a href="#portfolio" class="btn btn-ghost" data-cursor-word="ver">ver trabalhos</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="polaroid polaroid-main">
+          <div class="polaroid-photo camera-photo">
+            <svg viewBox="0 0 120 120" width="56" height="56"><rect x="18" y="34" width="84" height="60" rx="8" fill="none" stroke="currentColor" stroke-width="4"/><rect x="42" y="20" width="28" height="16" rx="3" fill="currentColor"/><circle cx="60" cy="64" r="20" fill="none" stroke="currentColor" stroke-width="4"/><circle cx="60" cy="64" r="9" fill="currentColor"/><circle cx="92" cy="46" r="3" fill="currentColor"/></svg>
+          </div>
+          <p class="polaroid-caption">feed em construção — set 2026</p>
+        </div>
+        <div class="washi washi-1" aria-hidden="true"></div>
+        <div class="scribble" aria-hidden="true">
+          <svg viewBox="0 0 200 80" width="140"><path d="M4 40 C 40 4, 80 76, 120 40 S 196 4, 196 40" fill="none" stroke="var(--lime)" stroke-width="6" stroke-linecap="round"/></svg>
+        </div>
+        <div class="float-bubble bubble-1" data-float="1">social ✦</div>
+        <div class="float-bubble bubble-2" data-float="2">design ↗</div>
+        <div class="float-bubble bubble-3" data-float="3">motion ◌</div>
+      </div>
     </div>
-  </div>
 
-  <div class="cursor-label" id="cursorLabel" aria-hidden="true"></div>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>criação de conteúdo</span><span>•</span><span>identidade visual</span><span>•</span><span>gestão de redes</span><span>•</span><span>edição de vídeo</span><span>•</span>
+        <span>criação de conteúdo</span><span>•</span><span>identidade visual</span><span>•</span><span>gestão de redes</span><span>•</span><span>edição de vídeo</span><span>•</span>
+      </div>
+    </div>
+  </section>
 
-  <!-- ELEMENTOS GLOBAIS -->
-  <div class="grain" aria-hidden="true"></div>
-  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <!-- SOBRE -->
+  <section class="sobre" id="sobre">
+    <div class="section-head">
+      <p class="eyebrow-hand">quem escreve isso</p>
+      <h2 class="section-title">Sobre mim</h2>
+    </div>
 
-  <!-- NAV -->
-  <header class="nav" id="nav">
-    <a href="#topo" class="logo" data-cursor-word="topo">
-      Nat<span>.</span>
-    </a>
-
-    <nav class="nav-links" id="navLinks">
-      <a href="#sobre" data-cursor-word="ver">sobre</a>
-      <a href="#portfolio" data-cursor-word="ver">portfólio</a>
-      <a href="#servicos" data-cursor-word="ver">serviços</a>
-      <a href="#contato" class="nav-cta" data-cursor-word="ir">contato</a>
-    </nav>
-
-    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
-      <span></span><span></span><span></span>
-    </button>
-  </header>
-
-  <main id="topo">
-
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-orb hero-orb-a" aria-hidden="true"></div>
-      <div class="hero-orb hero-orb-b" aria-hidden="true"></div>
-
-      <div class="tape tape-1" data-float-paper aria-hidden="true">
-        disponível pra novos projetos
+    <div class="sobre-grid">
+      <div class="sobre-photo">
+        <div class="photo-frame">
+          <div class="photo-placeholder">
+            <span>foto sua aqui</span>
+          </div>
+          <div class="corner-tape" aria-hidden="true"></div>
+        </div>
+        <p class="photo-note">↳ troque por uma foto real sua</p>
       </div>
 
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow-hand">olá, muito prazer —</p>
+      <div class="sobre-text">
+        <p class="sobre-lead">Há mais de 6 anos eu vivo entre camadas do Photoshop, timelines do CapCut e calendários de postagem — sempre buscando o ponto onde estratégia e estética se encontram.</p>
+        <p>Comecei no marketing, passei pela administração e hoje uno os dois mundos: penso como social media e executo como designer. Já criei peças para marcas como Neupar, XBRI e NewZone, e hoje toco a comunicação visual de negócios que confiam em mim pra contar a própria história.</p>
+        <p>Gosto de projetos onde dá pra ousar — onde o feed pode parecer um mood board vivo, não uma grade engessada.</p>
 
-          <h1 class="hero-title">
-            <span class="title-line"><span>Design que</span></span>
-            <span class="title-line"><span>para o <em class="mark mark-lime">scroll</em></span></span>
-            <span class="title-line"><span>e fica na <em class="mark mark-lilac">memória</em>.</span></span>
-          </h1>
-
-          <p class="hero-sub">
-            Sou a Natalia — Nat pra quem me conhece. Transformo marca, conteúdo e feed em algo que as pessoas realmente param pra olhar duas vezes.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#contato" class="btn btn-primary magnetic" data-cursor-word="ir">
-              <span>vamos conversar</span><b>↗</b>
-            </a>
-
-            <a href="#portfolio" class="btn btn-ghost magnetic" data-cursor-word="ver">
-              <span>ver trabalhos</span><b>↓</b>
-            </a>
-          </div>
-        </div>
-
-        <div class="hero-visual" id="heroVisual">
-          <div class="visual-shadow" aria-hidden="true"></div>
-
-          <div class="polaroid polaroid-main" data-parallax="1">
-            <div class="polaroid-photo camera-photo">
-              <svg viewBox="0 0 120 120" width="62" height="62" aria-hidden="true">
-                <rect x="18" y="34" width="84" height="60" rx="8" fill="none" stroke="currentColor" stroke-width="4"/>
-                <rect x="42" y="20" width="28" height="16" rx="3" fill="currentColor"/>
-                <circle cx="60" cy="64" r="20" fill="none" stroke="currentColor" stroke-width="4"/>
-                <circle cx="60" cy="64" r="9" fill="currentColor"/>
-                <circle cx="92" cy="46" r="3" fill="currentColor"/>
-              </svg>
-            </div>
-            <p class="polaroid-caption">feed em construção — set 2026</p>
-          </div>
-
-          <div class="washi washi-1" data-parallax="-0.8" aria-hidden="true"></div>
-
-          <div class="scribble" data-parallax="-1.25" aria-hidden="true">
-            <svg viewBox="0 0 200 80">
-              <path d="M4 40 C 40 4, 80 76, 120 40 S 196 4, 196 40" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
-            </svg>
-          </div>
-
-          <div class="float-bubble bubble-1 magnetic" data-bubble="1">social ✦</div>
-          <div class="float-bubble bubble-2 magnetic" data-bubble="2">design ↗</div>
-          <div class="float-bubble bubble-3 magnetic" data-bubble="3">motion ◌</div>
-
-          <span class="tiny-note note-a">ideia boa<br>merece movimento ↗</span>
-          <span class="tiny-note note-b">feito com intenção</span>
+        <div class="skills-row">
+          <span class="skill-chip">Photoshop</span>
+          <span class="skill-chip">Illustrator</span>
+          <span class="skill-chip">InDesign</span>
+          <span class="skill-chip">Canva</span>
+          <span class="skill-chip">CapCut</span>
+          <span class="skill-chip">Elementor</span>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="marquee" aria-hidden="true">
-        <div class="marquee-track">
-          <span>criação de conteúdo</span><i>✦</i>
-          <span>identidade visual</span><i>✦</i>
-          <span>gestão de redes</span><i>✦</i>
-          <span>edição de vídeo</span><i>✦</i>
-          <span>direção de arte</span><i>✦</i>
+  <!-- PORTFOLIO -->
+  <section class="portfolio" id="portfolio">
+    <div class="section-head">
+      <p class="eyebrow-hand">o que já saiu do papel</p>
+      <h2 class="section-title">Portfólio</h2>
+    </div>
 
-          <span>criação de conteúdo</span><i>✦</i>
-          <span>identidade visual</span><i>✦</i>
-          <span>gestão de redes</span><i>✦</i>
-          <span>edição de vídeo</span><i>✦</i>
-          <span>direção de arte</span><i>✦</i>
+    <div class="portfolio-grid">
+
+      <article class="proj-card" data-tilt="-3">
+        <div class="proj-photo proj-photo-1"></div>
+        <div class="proj-info">
+          <span class="proj-tag">Social Media</span>
+          <h3>Calendário &amp; conteúdo de feed</h3>
+          <p>troque pelo case real — resultado, print do feed, número que importa</p>
         </div>
+      </article>
+
+      <article class="proj-card" data-tilt="2">
+        <div class="proj-photo proj-photo-2"></div>
+        <div class="proj-info">
+          <span class="proj-tag">Identidade Visual</span>
+          <h3>Marca de ponta a ponta</h3>
+          <p>troque pelo case real — logo, paleta, aplicações</p>
+        </div>
+      </article>
+
+      <article class="proj-card" data-tilt="-2">
+        <div class="proj-photo proj-photo-3"></div>
+        <div class="proj-info">
+          <span class="proj-tag">Motion / Vídeo</span>
+          <h3>Reels que prendem até o fim</h3>
+          <p>troque pelo case real — link do reels, retenção, capa</p>
+        </div>
+      </article>
+
+      <article class="proj-card" data-tilt="3">
+        <div class="proj-photo proj-photo-4"></div>
+        <div class="proj-info">
+          <span class="proj-tag">Publicidade</span>
+          <h3>Campanha de lançamento</h3>
+          <p>troque pelo case real — peça-chave da campanha</p>
+        </div>
+      </article>
+
+      <article class="proj-card" data-tilt="-3">
+        <div class="proj-photo proj-photo-5"></div>
+        <div class="proj-info">
+          <span class="proj-tag">E-book / Apresentação</span>
+          <h3>Material que vende sozinho</h3>
+          <p>troque pelo case real — capa e páginas de destaque</p>
+        </div>
+      </article>
+
+      <article class="proj-card" data-tilt="2">
+        <div class="proj-photo proj-photo-6"></div>
+        <div class="proj-info">
+          <span class="proj-tag">Direção de Arte</span>
+          <h3>Sessão de fotos conceitual</h3>
+          <p>troque pelo case real — still da produção</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="servicos" id="servicos">
+    <div class="section-head">
+      <p class="eyebrow-hand">como posso ajudar</p>
+      <h2 class="section-title">Serviços</h2>
+    </div>
+
+    <div class="servicos-list">
+      <div class="servico-item">
+        <h3>Gestão de redes sociais</h3>
+        <p>Planejamento de conteúdo, calendário editorial e presença que soa como sua marca, todo mês.</p>
       </div>
-    </section>
-
-    <!-- SOBRE -->
-    <section class="sobre" id="sobre">
-      <div class="section-head">
-        <p class="eyebrow-hand">quem escreve isso</p>
-        <h2 class="section-title">Sobre mim</h2>
+      <div class="servico-item">
+        <h3>Criação de conteúdo para feed &amp; reels</h3>
+        <p>Peças estáticas e vídeos curtos pensados pro scroll — do roteiro à arte final.</p>
       </div>
-
-      <div class="sobre-grid">
-        <div class="sobre-photo">
-          <div class="photo-frame hover-lift">
-            <div class="photo-placeholder">
-              <span>foto sua aqui</span>
-            </div>
-            <div class="corner-tape" aria-hidden="true"></div>
-          </div>
-          <p class="photo-note">↳ troque por uma foto real sua</p>
-        </div>
-
-        <div class="sobre-text">
-          <p class="sobre-lead">
-            Há mais de 6 anos eu vivo entre camadas do Photoshop, timelines do CapCut e calendários de postagem — sempre buscando o ponto onde estratégia e estética se encontram.
-          </p>
-
-          <p>
-            Comecei no marketing, passei pela administração e hoje uno os dois mundos: penso como social media e executo como designer. Já criei peças para marcas como Neupar, XBRI e NewZone, e hoje toco a comunicação visual de negócios que confiam em mim pra contar a própria história.
-          </p>
-
-          <p>
-            Gosto de projetos onde dá pra ousar — onde o feed pode parecer um mood board vivo, não uma grade engessada.
-          </p>
-
-          <div class="skills-row">
-            <span class="skill-chip magnetic">Photoshop</span>
-            <span class="skill-chip magnetic">Illustrator</span>
-            <span class="skill-chip magnetic">InDesign</span>
-            <span class="skill-chip magnetic">Canva</span>
-            <span class="skill-chip magnetic">CapCut</span>
-            <span class="skill-chip magnetic">Elementor</span>
-          </div>
-        </div>
+      <div class="servico-item">
+        <h3>Identidade visual</h3>
+        <p>Logo, paleta, tipografia e um manual simples de aplicar no dia a dia da marca.</p>
       </div>
-    </section>
-
-    <!-- PORTFÓLIO -->
-    <section class="portfolio" id="portfolio">
-      <div class="section-head">
-        <p class="eyebrow-hand">o que já saiu do papel</p>
-        <h2 class="section-title">Portfólio</h2>
+      <div class="servico-item">
+        <h3>Edição de vídeo</h3>
+        <p>Corte, ritmo e legenda que seguram a atenção do primeiro ao último segundo.</p>
       </div>
-
-      <div class="portfolio-grid">
-        <article class="proj-card" data-tilt="-2">
-          <div class="proj-number">01</div>
-          <div class="proj-photo proj-photo-1">
-            <span class="proj-view">ver projeto ↗</span>
-          </div>
-          <div class="proj-info">
-            <span class="proj-tag">Social Media</span>
-            <h3>Calendário & conteúdo de feed</h3>
-            <p>troque pelo case real — resultado, print do feed, número que importa</p>
-          </div>
-        </article>
-
-        <article class="proj-card" data-tilt="2">
-          <div class="proj-number">02</div>
-          <div class="proj-photo proj-photo-2">
-            <span class="proj-view">ver projeto ↗</span>
-          </div>
-          <div class="proj-info">
-            <span class="proj-tag">Identidade Visual</span>
-            <h3>Marca de ponta a ponta</h3>
-            <p>troque pelo case real — logo, paleta, aplicações</p>
-          </div>
-        </article>
-
-        <article class="proj-card" data-tilt="-2">
-          <div class="proj-number">03</div>
-          <div class="proj-photo proj-photo-3">
-            <span class="proj-view">ver projeto ↗</span>
-          </div>
-          <div class="proj-info">
-            <span class="proj-tag">Motion / Vídeo</span>
-            <h3>Reels que prendem até o fim</h3>
-            <p>troque pelo case real — link do reels, retenção, capa</p>
-          </div>
-        </article>
-
-        <article class="proj-card" data-tilt="2">
-          <div class="proj-number">04</div>
-          <div class="proj-photo proj-photo-4">
-            <span class="proj-view">ver projeto ↗</span>
-          </div>
-          <div class="proj-info">
-            <span class="proj-tag">Publicidade</span>
-            <h3>Campanha de lançamento</h3>
-            <p>troque pelo case real — peça-chave da campanha</p>
-          </div>
-        </article>
-
-        <article class="proj-card" data-tilt="-2">
-          <div class="proj-number">05</div>
-          <div class="proj-photo proj-photo-5">
-            <span class="proj-view">ver projeto ↗</span>
-          </div>
-          <div class="proj-info">
-            <span class="proj-tag">E-book / Apresentação</span>
-            <h3>Material que vende sozinho</h3>
-            <p>troque pelo case real — capa e páginas de destaque</p>
-          </div>
-        </article>
-
-        <article class="proj-card" data-tilt="2">
-          <div class="proj-number">06</div>
-          <div class="proj-photo proj-photo-6">
-            <span class="proj-view">ver projeto ↗</span>
-          </div>
-          <div class="proj-info">
-            <span class="proj-tag">Direção de Arte</span>
-            <h3>Sessão de fotos conceitual</h3>
-            <p>troque pelo case real — still da produção</p>
-          </div>
-        </article>
+      <div class="servico-item">
+        <h3>Materiais gráficos &amp; apresentações</h3>
+        <p>E-books, decks e materiais corporativos com cara de agência, sem preço de agência.</p>
       </div>
-    </section>
-
-    <!-- SERVIÇOS -->
-    <section class="servicos" id="servicos">
-      <div class="section-head">
-        <p class="eyebrow-hand">como posso ajudar</p>
-        <h2 class="section-title">Serviços</h2>
+      <div class="servico-item">
+        <h3>Direção de arte</h3>
+        <p>Curadoria visual de campanhas, sessões de foto e lançamentos, do briefing à entrega.</p>
       </div>
+    </div>
+  </section>
 
-      <div class="servicos-list">
-        <div class="servico-item">
-          <span class="service-index">01</span>
-          <h3>Gestão de redes sociais</h3>
-          <p>Planejamento de conteúdo, calendário editorial e presença que soa como sua marca, todo mês.</p>
-          <span class="service-arrow">↗</span>
-        </div>
+  <!-- CONTATO -->
+  <section class="contato" id="contato">
+    <div class="contato-inner">
+      <p class="eyebrow-hand">bora fazer algo bonito?</p>
+      <h2 class="contato-title">Vamos criar seu <em class="mark mark-lime">próximo projeto</em> juntas.</h2>
 
-        <div class="servico-item">
-          <span class="service-index">02</span>
-          <h3>Criação de conteúdo para feed & reels</h3>
-          <p>Peças estáticas e vídeos curtos pensados pro scroll — do roteiro à arte final.</p>
-          <span class="service-arrow">↗</span>
-        </div>
-
-        <div class="servico-item">
-          <span class="service-index">03</span>
-          <h3>Identidade visual</h3>
-          <p>Logo, paleta, tipografia e um manual simples de aplicar no dia a dia da marca.</p>
-          <span class="service-arrow">↗</span>
-        </div>
-
-        <div class="servico-item">
-          <span class="service-index">04</span>
-          <h3>Edição de vídeo</h3>
-          <p>Corte, ritmo e legenda que seguram a atenção do primeiro ao último segundo.</p>
-          <span class="service-arrow">↗</span>
-        </div>
-
-        <div class="servico-item">
-          <span class="service-index">05</span>
-          <h3>Materiais gráficos & apresentações</h3>
-          <p>E-books, decks e materiais corporativos com cara de agência, sem preço de agência.</p>
-          <span class="service-arrow">↗</span>
-        </div>
-
-        <div class="servico-item">
-          <span class="service-index">06</span>
-          <h3>Direção de arte</h3>
-          <p>Curadoria visual de campanhas, sessões de foto e lançamentos, do briefing à entrega.</p>
-          <span class="service-arrow">↗</span>
-        </div>
+      <div class="contato-links">
+        <a href="https://wa.me/5545999017550" target="_blank" rel="noopener" class="contato-link" data-cursor-word="chamar">
+          <span>WhatsApp</span><small>45 99901-7550</small>
+        </a>
+        <a href="mailto:nataliadalpozzopj@gmail.com.br" class="contato-link" data-cursor-word="enviar">
+          <span>E-mail</span><small>nataliadalpozzopj@gmail.com.br</small>
+        </a>
+        <a href="https://www.instagram.com/_nataliadalpozzo_/" target="_blank" rel="noopener" class="contato-link" data-cursor-word="ver">
+          <span>Instagram</span><small>@_nataliadalpozzo_</small>
+        </a>
+        <a href="https://www.linkedin.com/in/natalia-dal-pozzo/" target="_blank" rel="noopener" class="contato-link" data-cursor-word="ver">
+          <span>LinkedIn</span><small>natalia-dal-pozzo</small>
+        </a>
       </div>
-    </section>
+    </div>
 
-    <!-- CONTATO -->
-    <section class="contato" id="contato">
-      <div class="contact-orb" aria-hidden="true"></div>
+    <footer class="footer">
+      <span>Natalia Dal Pozzo © 2026</span>
+      <span>feito à mão, com café e muitas camadas</span>
+    </footer>
+  </section>
 
-      <div class="contato-inner">
-        <p class="eyebrow-hand">bora fazer algo bonito?</p>
+</main>
 
-        <h2 class="contato-title">
-          Vamos criar seu <em class="mark mark-lime">próximo projeto</em> juntas.
-        </h2>
-
-        <div class="contato-links">
-          <a href="https://wa.me/5545999017550" target="_blank" rel="noopener" class="contato-link" data-cursor-word="chamar">
-            <span>WhatsApp</span>
-            <small>45 99901-7550</small>
-            <b>↗</b>
-          </a>
-
-          <a href="mailto:nataliadalpozzopj@gmail.com.br" class="contato-link" data-cursor-word="enviar">
-            <span>E-mail</span>
-            <small>nataliadalpozzopj@gmail.com.br</small>
-            <b>↗</b>
-          </a>
-
-          <a href="https://www.instagram.com/_nataliadalpozzo_/" target="_blank" rel="noopener" class="contato-link" data-cursor-word="ver">
-            <span>Instagram</span>
-            <small>@_nataliadalpozzo_</small>
-            <b>↗</b>
-          </a>
-
-          <a href="https://www.linkedin.com/in/natalia-dal-pozzo/" target="_blank" rel="noopener" class="contato-link" data-cursor-word="ver">
-            <span>LinkedIn</span>
-            <small>natalia-dal-pozzo</small>
-            <b>↗</b>
-          </a>
-        </div>
-      </div>
-
-      <footer class="footer">
-        <span>Natalia Dal Pozzo © 2026</span>
-        <span>feito à mão, com café e muitas camadas</span>
-      </footer>
-    </section>
-
-  </main>
-
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script defer src="./script.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="./script.js"></script>
 </body>
 </html>
