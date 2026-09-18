@@ -12,13 +12,30 @@
 
 <link rel="stylesheet" href="./style.css">
 </head>
-<body>
+<body class="is-loading">
+
+<!-- abertura animada -->
+<div class="site-loader" id="siteLoader" aria-hidden="true">
+  <div class="loader-blob loader-blob-1"></div>
+  <div class="loader-blob loader-blob-2"></div>
+  <div class="loader-inner">
+    <div class="loader-star">✦</div>
+    <p class="loader-kicker">social media • design • conteúdo</p>
+    <div class="loader-name" aria-label="Nat.">
+      <span>N</span><span>a</span><span>t</span><span class="loader-dot">.</span>
+    </div>
+    <div class="loader-line"><span></span></div>
+    <p class="loader-status">montando ideias bonitas...</p>
+  </div>
+</div>
 
 <!-- cursor custom -->
 <div class="cursor" id="cursor">
-  <svg viewBox="0 0 24 24" width="22" height="22">
-    <path d="M12 0 L14.5 8.5 L23 9 L15.8 13.8 L18.5 22 L12 16.8 L5.5 22 L8.2 13.8 L1 9 L9.5 8.5 Z" fill="currentColor"/>
-  </svg>
+  <div class="cursor-core">
+    <svg viewBox="0 0 24 24" width="22" height="22">
+      <path d="M12 0 L14.5 8.5 L23 9 L15.8 13.8 L18.5 22 L12 16.8 L5.5 22 L8.2 13.8 L1 9 L9.5 8.5 Z" fill="currentColor"/>
+    </svg>
+  </div>
 </div>
 
 <!-- grão de papel -->
@@ -69,6 +86,9 @@
         <div class="scribble" aria-hidden="true">
           <svg viewBox="0 0 200 80" width="140"><path d="M4 40 C 40 4, 80 76, 120 40 S 196 4, 196 40" fill="none" stroke="var(--lime)" stroke-width="6" stroke-linecap="round"/></svg>
         </div>
+        <div class="float-bubble bubble-1" data-float="1">social ✦</div>
+        <div class="float-bubble bubble-2" data-float="2">design ↗</div>
+        <div class="float-bubble bubble-3" data-float="3">motion ◌</div>
       </div>
     </div>
 
